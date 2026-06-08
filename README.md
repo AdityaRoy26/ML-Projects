@@ -31,7 +31,6 @@ ML-Projects/
 └── .gitignore
 ```
 ## Run Locally
-
 ```bash
 git clone https://github.com/AdityaRoy26/ML-Projects.git
 cd ML-Projects
