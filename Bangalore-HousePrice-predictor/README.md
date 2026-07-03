@@ -1,38 +1,91 @@
 # Bangalore House Price Predictor
 
+## Live Demo
+
+Hugging Face Deployment:
+
+https://huggingface.co/spaces/AdityaRoy2026/Bangalore-HousePrice-Predictor
+
+---
+
 ## Overview
 
-The Bangalore House Price Predictor is a Machine Learning web application that estimates house prices in Bangalore based on property features such as location, total square footage, number of bathrooms, and BHK configuration.
+The Bangalore House Price Predictor is an end-to-end Machine Learning project that estimates residential property prices in Bangalore based on key property features such as location, total square footage, number of bathrooms, and BHK configuration.
 
-The project uses data preprocessing, feature engineering, and a Ridge Regression model to predict house prices and provides a simple web interface built with Flask.
+The project covers the complete machine learning workflow including data cleaning, feature engineering, model training, model evaluation, deployment, and web application development.
+
+The final application is deployed on Hugging Face Spaces and provides real-time house price predictions through a simple web interface.
 
 ---
 
 ## Features
 
-- Predicts house prices in Bangalore
-- Location-based price estimation
-- User-friendly Flask web interface
-- Trained Ridge Regression model
-- Real-time predictions from user input
+- Real-time Bangalore house price prediction
+- Location-based property valuation
+- Interactive web interface built with Flask
+- Ridge Regression model for prediction
+- End-to-end deployment on Hugging Face Spaces
+- Clean and responsive user experience
 
 ---
 
 ## Tech Stack
 
 ### Machine Learning
+
 - Python
 - NumPy
 - Pandas
 - Scikit-learn
 
 ### Web Development
+
 - Flask
 - HTML
 - CSS
 
-### Model
+### Deployment
+
+- Hugging Face Spaces
+- Docker
+
+---
+
+## Model Information
+
+### Algorithm
+
 - Ridge Regression
+
+### Input Features
+
+| Feature | Description |
+|----------|-------------|
+| location | Property location in Bangalore |
+| total_sqft | Total area in square feet |
+| bath | Number of bathrooms |
+| bhk | Number of bedrooms |
+
+### Target Variable
+
+- price
+
+---
+
+## Project Workflow
+
+1. Data Collection
+2. Data Cleaning
+3. Missing Value Handling
+4. Feature Engineering
+5. Outlier Detection and Removal
+6. Categorical Encoding
+7. Model Training
+8. Model Evaluation
+9. Model Serialization using Pickle
+10. Flask Application Development
+11. Docker Containerization
+12. Deployment on Hugging Face Spaces
 
 ---
 
@@ -46,6 +99,7 @@ Bangalore-House-Price-Predictor
 ├── Cleaned_data.csv
 ├── Bang-HousepricePred.ipynb
 ├── requirements.txt
+├── Dockerfile
 ├── README.md
 │
 ├── templates
@@ -53,36 +107,6 @@ Bangalore-House-Price-Predictor
 │
 └── .gitignore
 ```
-
----
-
-## Dataset Features
-
-The model uses the following input features:
-
-| Feature | Description |
-|----------|-------------|
-| location | Area where the property is located |
-| total_sqft | Total area of the property in square feet |
-| bath | Number of bathrooms |
-| bhk | Number of bedrooms |
-
-Target Variable:
-
-- price
-
----
-
-## Model Training Workflow
-
-1. Data Cleaning
-2. Handling Missing Values
-3. Feature Engineering
-4. Outlier Removal
-5. Categorical Encoding
-6. Train-Test Split
-7. Ridge Regression Model Training
-8. Model Serialization using Pickle
 
 ---
 
@@ -100,13 +124,13 @@ git clone https://github.com/AdityaRoy26/ML-Projects.git
 cd Bangalore-House-Price-Predictor
 ```
 
-### Create Virtual Environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Virtual Environment
+### Activate the Virtual Environment
 
 #### Windows
 
@@ -128,9 +152,9 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Application
+## Running Locally
 
-Start the Flask server:
+Start the Flask application:
 
 ```bash
 python app.py
@@ -144,7 +168,7 @@ http://127.0.0.1:5000
 
 ---
 
-## Example Input
+## Example Prediction
 
 | Feature | Value |
 |----------|--------|
@@ -161,13 +185,24 @@ Estimated House Price: ₹ XX Lakhs
 
 ---
 
+## Deployment
+
+The application is deployed on Hugging Face Spaces using Docker.
+
+Live Application:
+
+https://huggingface.co/spaces/AdityaRoy2026/Bangalore-HousePrice-Predictor
+
+---
+
 ## Future Improvements
 
-- Enhanced UI design
+- Improved UI/UX design
+- Additional property features
+- Advanced ensemble models
 - Interactive visualizations
-- Support for additional property features
-- Model comparison and tuning
-- Cloud deployment
+- Model monitoring and retraining pipeline
+- Comparative model evaluation dashboard
 
 ---
 
@@ -176,3 +211,5 @@ Estimated House Price: ₹ XX Lakhs
 Aditya Roy
 
 GitHub: https://github.com/AdityaRoy26
+
+Hugging Face: https://huggingface.co/AdityaRoy2026
